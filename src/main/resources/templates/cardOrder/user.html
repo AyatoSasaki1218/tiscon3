@@ -55,7 +55,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日</label>
-                                <input name="birth01" type="text" class="js-changeYear"> 年
+                                <input name="birth01" type="text" class="number"> <span class="unit">年</span >
 
                                 <select name="birth02" class="js-changeMonth">
                                     <option value="1">1</option>
