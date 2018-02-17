@@ -26,10 +26,42 @@
 
                             <div class="ui horizontal divider">ご本人について</div>
 
-                            <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
-                                <label>お名前（漢字）</label>
-                                <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
-                            </div>
+
+
+
+
+
+
+
+                            <span class="field" th:classappend="${form.hasErrors('sei')} ? 'error'">
+                                <label>名前</label>
+                                <left>
+                                 性<input type="text"  name="sei"
+
+                                       style="width:200px;height:30px;"
+
+                                       th:value="${form.kanjiName}"/>
+                            </span>
+
+
+
+
+                           <span class="field" th:classappend="${form.hasErrors('mei')} ? 'error'">
+
+                                名<input type="text"
+
+
+                                       style="width:200px;height:30px;"
+
+                                       name="mei" th:value="${form.kanjiName}"/>
+                                </left>
+                            </span>
+
+
+
+
+
+
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）</label>
                                 <input type="text" name="kanaName" th:value="${form.kanaName}"/>
