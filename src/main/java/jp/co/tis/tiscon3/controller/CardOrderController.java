@@ -83,7 +83,7 @@ public class CardOrderController {
      */
     @Transactional
     public HttpResponse create(CardOrderForm form) {
-
+        form.setErrors(null);
         if (form.hasErrors()) {
             return templateEngine.render("cardOrder/job", "form", form);
         }
