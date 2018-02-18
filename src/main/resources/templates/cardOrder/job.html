@@ -35,13 +35,13 @@
                             <div class="ui statement">ご職業が「経営・自営業」、「会社員」、「契約・派遣社員」、「公務員」、「民間団体」、「その他（有職）」の方は、以下の項目をご入力ください。</div>
                             <div class="field" th:classappend="${form.hasErrors('employerName')} ? 'error'">
                                 <label>お勤め先名</label>
-                                <input type="text" name="employerName" th:value="${form.employerName}"/>
+                                <input type="text" name="employerName" th:value="${form.employerName}"placeholder="株式会社＊＊＊"/>
                             </div>
                             <br>
 
                             <div class="field" th:classappend="${form.hasErrors('department')} ? 'error'">
                                 <label>所属部署</label>
-                                <input type="text" name="department" th:value="${form.department}"/>
+                                <input type="text" name="department" th:value="${form.department}"placeholder="＊＊＊部"/>
                             </div>
                             <br>
 
@@ -53,7 +53,8 @@
 
                             <div class="field" th:classappend="${form.hasErrors('employeeLength')} ? 'error'">
                                 <label>勤続年数</label>
-                                <input type="text" class="number" name="employeeLength" th:value="${form.employeeLength}"/><span class="unit">年</span >
+                                <input type="text" class="number" name="employeeLength" th:value="${form.employeeLength}"placeholder="*"/>
+                                <span class="unit">年</span >
                             </div>
                             <br>
 
@@ -61,18 +62,18 @@
                                 <label>お勤め先郵便番号</label>
                                 <span style="display:flex; align-items:center">
                                 <input type="text"  name="employerAddress_1"
-                                       style="width:60px;height:30px;" th:value="${form.employerAddress}"/>
+                                       style="width:60px;height:35px;" th:value="${form.employerAddress}"placeholder="***"/>
                                     <span>
                                         &nbsp;-&nbsp;
                                     </span>
                                 <input type="text" name="employerAddress_2"
-                                       style="width:70px;height:30px;" th:value="${form.employerAddress}"/>
+                                       style="width:70px;height:35px;" th:value="${form.employerAddress}"placeholder="****"/>
                             </div>
                             <br>
 
                             <div class="field" th:classappend="${form.hasErrors('employerAddress')} ? 'error'">
                                 <label>お勤め先住所</label>
-                                <input type="text" name="employerAddress" th:value="${form.employerAddress}"/>
+                                <input type="text" name="employerAddress" th:value="${form.employerAddress}"placeholder="大阪府大阪府＊丁目＊＊-＊＊"/>
                             </div>
                             <br>
 
@@ -80,17 +81,17 @@
                                 <label>お勤め先電話番号</label>
                                 <span style="display:flex; align-items:center">
                                 <input type="text"  name="employerPhoneNumber_1"
-                                       style="width:60px;height:30px;" th:value="${form.employerPhoneNumber}"/>
+                                       style="width:60px;height:35px;" th:value="${form.employerPhoneNumber}"placeholder="***"/>
                                     <span>
                                         &nbsp;-&nbsp;
                                     </span>
                                 <input type="text" name="employerPhoneNumber_2"
-                                       style="width:70px;height:30px;" th:value="${form.employerPhoneNumber}"/>
+                                       style="width:70px;height:35px;" th:value="${form.employerPhoneNumber}"placeholder="****"/>
                                     <span>
                                         &nbsp;-&nbsp;
                                     </span>
                                 <input type="text" name="employerPhoneNumber_3"
-                                       style="width:70px;height:30px;" th:value="${form.employerPhoneNumber}"/>
+                                       style="width:70px;height:35px;" th:value="${form.employerPhoneNumber}"placeholder="****"/>
                                 </span>
                             </div>
                             <br>
