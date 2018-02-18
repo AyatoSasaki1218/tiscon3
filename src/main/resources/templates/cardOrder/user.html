@@ -111,25 +111,64 @@
 
                             -->
                             </div>
+                            <!--郵便番号-->
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号</label>
-                                <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
+                                <span style="display:flex; align-items:center">
+                                <input type="text" class="zipcode" name="zipCode_1"
+                                       style="width:60px;height:30px;" th:value="${form.zipCode}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" class="zipcode" name="zipCode_2"
+                                       style="width:70px;height:30px;" th:value="${form.zipCode}"/>
+                                </span>
                             </div>
+
+                         <!--ご住所-->
                             <div class="field" th:classappend="${form.hasErrors('address')} ? 'error'">
                                 <label>ご住所</label>
                                 <input type="text" name="address" th:value="${form.address}"/>
                             </div>
+
+                         <!--自宅電話番号-->
                             <div class="field" th:classappend="${form.hasErrors('homePhoneNumber')} ? 'error'">
                                 <label>自宅電話番号</label>
-                                <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
+                                <span style="display:flex; align-items:center">
+                                <input type="text"  name="homePhoneNumber_1"
+                                       style="width:60px;height:30px;" th:value="${form.homePhoneNumber}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" name="homePhoneNumber_2"
+                                       style="width:70px;height:30px;" th:value="${form.homePhoneNumber}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" name="homePhoneNumber_3"
+                                       style="width:70px;height:30px;" th:value="${form.homePhoneNumber}"/>
+                                </span>
                             </div>
+
+                         <!--携帯電話番号-->
                             <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber')} ? 'error'">
                                 <label>携帯電話番号</label>
-                                <input type="text" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+                                <span style="display:flex; align-items:center">
+                                <input type="text"  name="mobilePhoneNumber_1"
+                                       style="width:60px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" name="mobilePhoneNumber_2"
+                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" name="mobilePhoneNumber_3"
+                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                </span>
                             </div>
+
+                            <!--メールアドレス-->
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
                                 <label>メールアドレス</label>
-                                <input type="text" name="emailAddress" th:value="${form.emailAddress}"/>
+                                <span style="display:flex; align-items:center">
+                                <input type="text" class="emailAddress" name="emailAddress_1"
+                                       style="width:300px;height:30px;" th:value="${form.emailAddress}"/>
+                                <span>&nbsp;@&nbsp;</span>
+                                <input type="text" class="emailAddress" name="emailAddress_2"
+                                       style="width:100px;height:30px;" th:value="${form.emailAddress}"/>
+                                </span>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('spouse')} ? 'error'">
                                 <label>配偶者有無</label>

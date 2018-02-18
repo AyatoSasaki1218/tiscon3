@@ -47,9 +47,12 @@
 
                             <div class="field" th:classappend="${form.hasErrors('e_number')} ? 'error'">
                                 <label>お勤め先郵便番号</label>
+                                <span style="display:flex; align-items:center">
                                 <input type="text"  name="employerAddress_1"
                                        style="width:60px;height:30px;" th:value="${form.employerAddress}"/>
-                                &nbsp;-&nbsp;
+                                    <span>
+                                        &nbsp;-&nbsp;
+                                    </span>
                                 <input type="text" name="employerAddress_2"
                                        style="width:70px;height:30px;" th:value="${form.employerAddress}"/>
 
@@ -64,15 +67,20 @@
 
                             <div class="field" th:classappend="${form.hasErrors('employerPhoneNumber')} ? 'error'">
                                 <label>お勤め先電話番号</label>
-
+                                <span style="display:flex; align-items:center">
                                 <input type="text"  name="employerPhoneNumber_1"
                                        style="width:60px;height:30px;" th:value="${form.employerPhoneNumber}"/>
-
+                                    <span>
+                                        &nbsp;-&nbsp;
+                                    </span>
                                 <input type="text" name="employerPhoneNumber_2"
                                        style="width:70px;height:30px;" th:value="${form.employerPhoneNumber}"/>
-
+                                    <span>
+                                        &nbsp;-&nbsp;
+                                    </span>
                                 <input type="text" name="employerPhoneNumber_3"
                                        style="width:70px;height:30px;" th:value="${form.employerPhoneNumber}"/>
+                                </span>
                             </div>
                             
 
