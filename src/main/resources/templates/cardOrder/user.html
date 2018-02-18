@@ -21,43 +21,65 @@
 
                             <!-- /*エラーがあれば表示する*/ -->
                             <ul class="ui red basic label" th:if="${form.hasErrors()}">
-                                <li th:each="error : ${form.getErrors().entrySet()}" th:text="${error.value}"></li>
-                            </ul>
+                                <li th:each="error : ${form.getErrors().entrySet()}" th:switch="${error.key}">
+                                    <p th:case=="job">職業を選択してください</p>
+                                    <p th:case=="kanjiName">お名前（姓名）を入力してください</p>
+                                    <p th:case=="kanaName">お名前（カナ）を入力してください</p>
+                                    <p th:case=="spouse">配偶者有無を選択してください</p>
+                                    <p th:case=="gender">性別を選択してください</p>
+                                    <p th:case=="emailAddress">メールアドレスを入力してください</p>
+                                    <p th:case=="debt">借入金額を入力してください</p>
+                                    <p th:case=="alphabetName">お名前（ローマ字）を入力してください</p>
+                                    <p th:case=="income">昨年の取得を入力してください</p>
+                                    <p th:case=="address">住所を入力してください</p>
+                                    <p th:case=="zipCode">郵便番号を入力してください</p>
+                                    <p th:case=="birth01">誕生日を入力してください</p>
 
+                                </li>
+                            </ul>
+                            
                             <div class="ui horizontal divider">ご本人について</div>
 
 
 
 
                             <div class="field" th:classappend="${form.hasErrors('number')} ? 'error'">
-                                <label>名前(姓名)</label>
+                                <label>お名前(姓名)</label>
 
                                 <input type="text" name="sei"
-                                       style="width:295px;height:30px;" th:value="${form.kanjiName}"/>
+                                       style="width:295px;height:35px;" th:value="${form.kanjiName}" placeholder="羽生"/>
                                 <input type="text" name="mei"
-                                       style="width:294px;height:30px;" th:value="${form.kanjiName}"/>
+                                       style="width:294px;height:35px;" th:value="${form.kanjiName}" placeholder="結弦"/>
                             </div>
 
 
 
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）</label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+
+                                <input type="text" name="kanasei"
+                                       style="width:295px;height:35px;"th:value="${form.kanaName}" placeholder="ハニュウ"/>
+                                <input type="text" name="kanamei"
+                                       style="width:294px;height:35px;"th:value="${form.kanaName}" placeholder="ユヅル"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
                                 <label>お名前（ローマ字）</label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+
+                                <input type="text" name="alphabetsei"
+                                       style="width:295px;height:35px;"th:value="${form.alphabetName}" placeholder="hanyu"/>
+                                <input type="text" name="alphabetmei"
+                                       style="width:294px;height:35px;"th:value="${form.alphabetName}" placeholder="yuzuru"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
+                            <div class="field"  th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日</label>
                                 <input name="birth01" type="text" class="number"> <span class="unit">年</span >
 
-                                <select name="birth02" class="js-changeMonth">
+                                <select name="birth02" style="display: inline" class="number" >
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -72,7 +94,7 @@
                                     <option value="12">12</option>
                                 </select> 月
 
-                                <select name="birth03" class="js-changeDay">
+                                <select name="birth03" style="display: inline" class="number">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
