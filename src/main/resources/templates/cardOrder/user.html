@@ -23,7 +23,7 @@
                             <ul class="ui red basic label" th:if="${form.hasErrors()}">
                                 <li th:each="error : ${form.getErrors().entrySet()}" th:text="${error.value}"></li>
                             </ul>
-
+                            
                             <div class="ui horizontal divider">ご本人について</div>
 
 
@@ -33,9 +33,9 @@
                                 <label>名前(姓名)</label>
 
                                 <input type="text" name="sei"
-                                       style="width:295px;height:35px;" th:value="${form.kanjiName}" placeholder="鈴木"/>
+                                       style="width:295px;height:35px;" th:value="${form.kanjiName}" placeholder="羽生"/>
                                 <input type="text" name="mei"
-                                       style="width:294px;height:35px;" th:value="${form.kanjiName}"/>
+                                       style="width:294px;height:35px;" th:value="${form.kanjiName}" placeholder="結弦"/>
                             </div>
 
 
@@ -44,17 +44,17 @@
                                 <label>お名前（カナ）</label>
 
                                 <input type="text" name="kanasei"
-                                       style="width:295px;height:35px;"th:value="${form.kanaName}"/>
+                                       style="width:295px;height:35px;"th:value="${form.kanaName}" placeholder="ハニュウ"/>
                                 <input type="text" name="kanamei"
-                                       style="width:294px;height:35px;"th:value="${form.kanaName}"/>
+                                       style="width:294px;height:35px;"th:value="${form.kanaName}" placeholder="ユヅル"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
                                 <label>お名前（ローマ字）</label>
 
                                 <input type="text" name="alphabetsei"
-                                       style="width:295px;height:35px;"th:value="${form.alphabetName}"/>
+                                       style="width:295px;height:35px;"th:value="${form.alphabetName}" placeholder="hanyu"/>
                                 <input type="text" name="alphabetmei"
-                                       style="width:294px;height:35px;"th:value="${form.alphabetName}"/>
+                                       style="width:294px;height:35px;"th:value="${form.alphabetName}" placeholder="yuzuru"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
