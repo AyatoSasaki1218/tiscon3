@@ -33,20 +33,28 @@
                                 <label>名前(姓名)</label>
 
                                 <input type="text" name="sei"
-                                       style="width:295px;height:30px;" th:value="${form.kanjiName}"/>
+                                       style="width:295px;height:35px;" th:value="${form.kanjiName}"/>
                                 <input type="text" name="mei"
-                                       style="width:294px;height:30px;" th:value="${form.kanjiName}"/>
+                                       style="width:294px;height:35px;" th:value="${form.kanjiName}"/>
                             </div>
 
 
 
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）</label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+
+                                <input type="text" name="kanasei"
+                                       style="width:295px;height:35px;"th:value="${form.kanaName}"/>
+                                <input type="text" name="kanamei"
+                                       style="width:294px;height:35px;"th:value="${form.kanaName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
                                 <label>お名前（ローマ字）</label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+
+                                <input type="text" name="alphabetsei"
+                                       style="width:295px;height:35px;"th:value="${form.alphabetName}"/>
+                                <input type="text" name="alphabetmei"
+                                       style="width:294px;height:35px;"th:value="${form.alphabetName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
