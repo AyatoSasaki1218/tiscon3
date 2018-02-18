@@ -72,9 +72,6 @@ public class CardOrderController {
      * @return 本人登録ページresponse
      */
     public HttpResponse modifyUser(CardOrderForm form) {
-        if (form.hasErrors()) {
-            return templateEngine.render("cardOrder/user", "form", form);
-        }
 
         return templateEngine.render("cardOrder/user", "form", form);
     }
