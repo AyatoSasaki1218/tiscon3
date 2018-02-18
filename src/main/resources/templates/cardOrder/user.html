@@ -21,7 +21,21 @@
 
                             <!-- /*エラーがあれば表示する*/ -->
                             <ul class="ui red basic label" th:if="${form.hasErrors()}">
-                                <li th:each="error : ${form.getErrors().entrySet()}" th:text="${error.value}"></li>
+                                <li th:each="error : ${form.getErrors().entrySet()}" th:switch="${error.key}">
+                                    <p th:case=="job">職業を選択してください</p>
+                                    <p th:case=="kanjiName">お名前（姓名）を入力してください</p>
+                                    <p th:case=="kanaName">お名前（カナ）を入力してください</p>
+                                    <p th:case=="spouse">配偶者有無を選択してください</p>
+                                    <p th:case=="gender">性別を選択してください</p>
+                                    <p th:case=="emailAddress">メールアドレスを入力してください</p>
+                                    <p th:case=="debt">借入金額を入力してください</p>
+                                    <p th:case=="alphabetName">お名前（ローマ字）を入力してください</p>
+                                    <p th:case=="income">昨年の取得を入力してください</p>
+                                    <p th:case=="address">住所を入力してください</p>
+                                    <p th:case=="zipCode">郵便番号を入力してください</p>
+                                    <p th:case=="birth01">誕生日を入力してください</p>
+
+                                </li>
                             </ul>
                             
                             <div class="ui horizontal divider">ご本人について</div>
@@ -30,7 +44,7 @@
 
 
                             <div class="field" th:classappend="${form.hasErrors('number')} ? 'error'">
-                                <label>名前(姓名)</label>
+                                <label>お名前(姓名)</label>
 
                                 <input type="text" name="sei"
                                        style="width:295px;height:35px;" th:value="${form.kanjiName}" placeholder="羽生"/>
