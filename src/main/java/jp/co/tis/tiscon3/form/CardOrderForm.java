@@ -25,8 +25,18 @@ public class CardOrderForm extends FormBase {
 
     @NotBlank
     @Size(max = 10)
-    @Pattern(regexp = "\\d{4}/\\d{1,2}/\\d{1,2}$")
-    private String dateOfBirth;
+    @Pattern(regexp = "\\d{4}$")
+    private String birth01;
+
+    @NotBlank
+    @Size(max = 10)
+    @Pattern(regexp = "\\d{1,2}$")
+    private String birth02;
+
+    @NotBlank
+    @Size(max = 10)
+    @Pattern(regexp = "\\d{1,2}$")
+    private String birth03;
 
     @NotBlank
     @Size(max = 6)
