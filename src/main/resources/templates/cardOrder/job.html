@@ -24,6 +24,12 @@
                                 <li th:each="error : ${form.getErrors().entrySet()}" th:text="${error.value}"></li>
                             </ul>
 
+                            <p>
+                                <font size="5">〇</font>お申込情報 →
+                                <font size="10">●</font>お勤め先情報の入力　→
+                                <font size="5">〇</font>お申込み完了
+                            <p/>
+
                             <div class="ui horizontal divider">お勤め先について</div>
 
                             <div class="ui statement">ご職業が「経営・自営業」、「会社員」、「契約・派遣社員」、「公務員」、「民間団体」、「その他（有職）」の方は、以下の項目をご入力ください。</div>
