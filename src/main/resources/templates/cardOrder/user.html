@@ -92,7 +92,8 @@
                             <!--生年月日-->
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日</label>
-                                <input name="birth01" type="text" class="number"> <span class="unit">年</span >
+                                <input name="birth01" type="text" class="number"placeholder="****">
+                                <span class="unit">年</span >
 
                                 <select name="birth02" style="display: inline" class="number" >
                                     <option value="1">1</option>
@@ -191,13 +192,13 @@
                                 <label>携帯電話番号</label>
                                 <span style="display:flex; align-items:center">
                                 <input type="text" name="mobilePhoneNumber_1"
-                                       style="width:60px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                       style="width:60px;height:30px;" th:value="${form.mobilePhoneNumber}"placeholder="***"/>
                                 <span>&nbsp;-&nbsp;</span>
                                 <input type="text" name="mobilePhoneNumber_2"
-                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"placeholder="****"/>
                                 <span>&nbsp;-&nbsp;</span>
                                 <input type="text" name="mobilePhoneNumber_3"
-                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"/>
+                                       style="width:70px;height:30px;" th:value="${form.mobilePhoneNumber}"placeholder="****"/>
                                 </span>
                             </div>
                             <br>
@@ -207,10 +208,10 @@
                                 <label>メールアドレス</label>
                                 <span style="display:flex; align-items:center">
                                 <input type="text" class="emailAddress" name="emailAddress_1"
-                                       style="width:270px;height:30px;" th:value="${form.emailAddress}"/>
+                                       style="width:270px;height:30px;" th:value="${form.emailAddress}"placeholder="********"/>
                                 <span>&nbsp;@&nbsp;</span>
                                 <input type="text" class="emailAddress" name="emailAddress_2"
-                                       style="width:140px;height:30px;" th:value="${form.emailAddress}"/>
+                                       style="width:140px;height:30px;" th:value="${form.emailAddress}"placeholder="***"/>
                                 </span>
                             </div>
                             <br>
@@ -255,14 +256,16 @@
                             <!--ローン等のお借り入れ金額-->
                             <div class="field" th:classappend="${form.hasErrors('debt')} ? 'error'">
                                 <label>ローン等のお借り入れ金額</label>
-                                <input type="text" class="number" name="debt" th:value="${form.debt}"/><span class="unit">万円</span>
+                                <input type="text" class="number" name="debt" th:value="${form.debt}"placeholder="***"/>
+                                <span class="unit">万円</span>
                             </div>
                             <br>
 
                             <!--昨年の所得-->
                             <div class="field" th:classappend="${form.hasErrors('income')} ? 'error'">
                                 <label>昨年の所得</label>
-                                <input type="text" class="number" name="income" th:value="${form.income}"/><span class="unit">万円</span>
+                                <input type="text" class="number" name="income" th:value="${form.income}"placeholder="***"/>
+                                <span class="unit">万円</span>
                             </div>
                             <br>
 
