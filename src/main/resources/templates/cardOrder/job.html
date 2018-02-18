@@ -73,7 +73,7 @@
 
                             <div class="field" th:classappend="${form.hasErrors('employerAddress')} ? 'error'">
                                 <label>お勤め先住所</label>
-                                <input type="text" name="employerAddress" th:value="${form.employerAddress}"placeholder="大阪府大阪府＊丁目＊＊-＊＊"/>
+                                <input type="text" name="employerAddress" th:value="${form.employerAddress}"placeholder="大阪府大阪市＊丁目＊＊-＊＊"/>
                             </div>
                             <br>
 
@@ -103,7 +103,8 @@
                                     <option value="農林水鉱" th:checked="${form.industryType}=='農林水鉱'">農業・林業・水産業・鉱業</option>
                                     <option value="建築不動産" th:checked="${form.industryType}=='建築不動産'">建設・不動産業</option>
                                     <option value="製造" th:checked="${form.industryType}=='製造'">製造業</option>
-                                    <option value="卸小売流通" th:checked="${form.industryType}=='卸小売流通'">卸売業・小売・その他流通業</option>
+                                    <option value="卸小売流通" th:c
+                                            hecked="${form.industryType}=='卸小売流通'">卸売業・小売・その他流通業</option>
                                     <option value="金融保険" th:checked="${form.industryType}=='金融保険'">金融・保険業</option>
                                     <option value="運輸通信" th:checked="${form.industryType}=='運輸通信'">運輸・通信業</option>
                                     <option value="電気ガス" th:checked="${form.industryType}=='電気ガス'">電気・ガス業</option>
